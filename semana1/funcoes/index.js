@@ -43,63 +43,92 @@
 
 // a) A função não deve receber nenhum parâmetro e deve imprimir uma mensagem falando algumas informações sobre você, como: 
 
+    const nome = "Alexandre"
+    const idade = 37
+    const endereco = "Curitiba"
+    const profissao = "estudante"
+
     function informacoesSobreMim() {
     console.log(`Eu sou ${nome}, tenho ${idade}, anos, moro em ${endereco}, e sou ${profissao}.`)
-}
+    }
 
-const nome = "Alexandre"
-const idade = 37
-const endereco = "Curitiba"
-const profissao = "estudante"
-
-// "Eu sou Caio, tenho 23 anos, moro em São Paulo e sou estudante."
-
-// Troque o nome, idade, cidade e se é estudante ou não por informações sobre você. Lembrando que a função não possui entradas, apenas imprime essa mensagem.
-
-
-console.log(informacoesSobreMim("Alexandre", 37, "Curitiba", "estudante"))
-
-console.log(`Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e sou ${profissao}.`)
+    informacoesSobreMim()
 
 // b)  Agora escreva uma função que receba 4 parâmetros que correspondem às informações de uma pessoa: o nome (`string`), a idade (`number`), a cidade (`string`) e uma profissão (`string`). Ela deve retornar uma `string` que unifique todas as informações da pessoa em uma só mensagem com o template:
 
-function imprimeDadosPessoais(nome, idade, endereco, profissao) {
-const resultado = `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e sou ${profissao}.`
-return resultado
-}
+    function imprimeDadosPessoais(nome, idade, endereco, profissao) {
+        return `Eu sou ${nome}, tenho ${idade} anos, moro em ${endereco} e sou ${profissao}.`
+    }
+        const minhaFrase = imprimeDadosPessoais("Alexandre", 37, "Curitiba", "estudante")
+        console.log(minhaFrase)
+        console.log(imprimeDadosPessoais("Alexandre", 37, "Curitiba", "estudante"))
 
-console.log(imprimeDadosPessoais("Alexandre", 37, "Curitiba", "estudante"))
-
-// Eu sou [NOME], tenho [IDADE] anos, moro em [ENDEREÇO] e sou [PROFISSÃO].
 
 // 2. Escreva as funções explicadas abaixo:
 
 // a) Escreva uma função que receba 2 números como parâmetros, e, dentro da função, faça a soma das duas entradas e retorne o resultado. Invoque a função e imprima no console o resultado.
 
-function calcularNumeros(numeroUm, numeroDois) {
-    const soma = numeroUm + numeroDois
-    return soma
+    function calculeDoisNumeros(numeroUm, numeroDois) {
+        return numeroUm + numeroDois
     }
-      
-    console.log(calcularNumeros())
+      const resultado = calculeDoisNumeros(5, 20)
+      console.log(`2.a)`, resultado)
+
 
     // b) Faça uma função que recebe 2 números e retorne um booleano que informa se o primeiro número é maior ou igual ao segundo.
 
-    function calcularNumeros(numeroUm, numeroDois) {
-        const resultado = numeroUm >= numeroDois
-        return resultado
-        }
-
-        const numeroUmPrompt = Number(prompt("Insira um número"))
-        const numeroDoisPrompt = Number(prompt("Insira mais um número"))
-    
-        console.log(calcularNumeros())
+    function calculeMaiorIgual(numeroUm, numeroDois) {
+        return numeroUm >= numeroDois
+    }
+        const primeiroNumero = calculeMaiorIgual(5, 20)
+        console.log(`2.b)`, primeiroNumero)
 
         // c) Escreva uma função que receba um número e devolva um booleano indicando se ele é par ou não
 
+    function verificaParOuImpar(numero) {
+        return numero % 2 === 0
+    }
+        const seraQueEhPar = verificaParOuImpar(6)
+        console.log(`2.c)`, seraQueEhPar)
+        
+
         //d) Faça uma função que recebe uma mensagem (string) como parâmetro e imprima o tamanho dessa mensagem, juntamente com uma versão dela em letras maiúsculas.
 
+    function tamanhoMensagemMaiuscula(aMensagem) {
+        return `${aMensagem.length}, ${aMensagem.toUpperCase()}`
+    }
+        console.log(`2.d)`, tamanhoMensagemMaiuscula(`Não chore que é pior`))
 
         // 3. Crie uma função para cada uma das operações básicas (soma, subtração, multiplicação e divisão). Em seguida, peça para o usuário inserir dois números e chame essas 4 funções com esses valores inputados pelo usuário sendo o argumento. Por fim, mostre no console o resultado das operações:
+
+    function some(numeroUm, numeroDois){
+        return numeroUm + numeroDois
+    }
+
+    function subtraia(numeroUm, numeroDois) {
+        return numeroUm - numeroDois
+    }
+
+    function multiplique(numeroUm, numeroDois) {
+        return numeroUm * numeroDois
+    }
+
+    function divida(numeroUm, numeroDois) {
+        return numeroUm / numeroDois
+    }
+
+    const primeiroNumeroUsuario = Number(prompt(`Insira um número`))
+    const segundoNumeroUsuario = Number(prompt(`Insira mais um número`))
+
+    console.log(`3.`, some(primeiroNumeroUsuario, segundoNumeroUsuario))
+    console.log(`3.`, subtraia(primeiroNumeroUsuario, segundoNumeroUsuario))
+    console.log(`3.`, multiplique(primeiroNumeroUsuario, segundoNumeroUsuario))
+    console.log(`3.`, divida(primeiroNumeroUsuario, segundoNumeroUsuario))
+    
+
+
+
+
+
 
 
