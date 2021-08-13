@@ -110,10 +110,10 @@ function trocaPrimeiroEUltimo(array) {
 }
 
 // EXERCÍCIO 12
-function checaIgualdadeDesconsiderandoCase(string1, string2) {
-  
+function checaIgualdadeDesconsiderandoCase(string1, string2) {    
+  return string1.toLowerCase() === string2.toLowerCase()
 
-}
+  }
 
 // EXERCÍCIO 13
 function checaRenovacaoRG() {
