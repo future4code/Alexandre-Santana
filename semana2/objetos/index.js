@@ -118,24 +118,26 @@
     // a) Crie dois objetos diferentes com as seguintes propriedades: nome, idade e profissão.
 
         const objetoUm = {
-            nome: "Alexandre"
-            idade: 37
+            nome: "Alexandre",
+            idade: 37,
             profissao: "Dev"
         }
         const objetoDois = {
-            nome: "Bruno"
-            idade: 23
+            nome: "Bruno",
+            idade: 23,
             profissao: "Instrutor"
+        }
 
         // b) Escreva uma função que receba esses objetos e retorne um array com as seguintes informações:
 
             function retornaArray(objetoUm){
-                const dadosUm = [objetoUm.nome, objetoUm.nome.lenght, objetoUm.idade, objetoUm.profissao, objetoUm.profissao.lenght]
+                const dadosUm = 
+                    [objetoUm.nome, objetoUm.nome.length, objetoUm.idade, objetoUm.profissao, objetoUm.profissao.length]
                 return dadosUm
             }
             console.log(retornaArray(objetoUm))
+            console.log(retornaArray(objetoDois))
 
-            
     // 1. O valor de `nome`
     // 2. O numero de caracteres do valor `nome`
     // 3. O valor de `idade`
