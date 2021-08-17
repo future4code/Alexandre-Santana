@@ -144,4 +144,42 @@
     // 4. O valor de `profissão`
     // 5. O numero de caracteres do valor `profissão`
 
+    //     3. Resolva os passos a seguir: 
+
+    // a) Crie uma variável de escopo global que guarde um `array` vazio chamada `carrinho`
+
+    const carrinho = []
+
+    // b) Crie três novos objetos que representem frutas de um sacolão. Eles devem ter as seguintes propriedades: nome (`string`) e disponibilidade (`boolean` - devem começar como `true`)
+
+    const frutasSacolao1 = {
+        nome: "Maça",
+        disponibilidade: true
+    }
+
+    const frutasSacolao2 = {
+        nome: "Pêra",
+        disponibilidade: true
+    }
+
+    const frutasSacolao3 = {
+        nome: "Uva",
+        disponibilidade: true
+    }
+
+    // c) Crie uma função que **receba** um objeto fruta por **parâmetro** e coloque-a dentro do array de `carrinho`. Invoque essa função passando os três objetos criados. 
+
+    function adicionaMinhaFruta(frutas) {
+        carrinho.push(frutas)
+    }
+
+    adicionaMinhaFruta(frutasSacolao1)
+    adicionaMinhaFruta(frutasSacolao2)
+    adicionaMinhaFruta(frutasSacolao3)
+
+
+    // d) Imprima a variável `carrinho` e garanta que ela agora seja um **array preenchido com três objetos.** 
+
+    console.log(carrinho)
+
     
