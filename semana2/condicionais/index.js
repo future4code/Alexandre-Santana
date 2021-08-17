@@ -155,3 +155,82 @@ Aproveite o seu ${lanchinho}`)
         console.log("Escolha outro filme")
     }
    
+    const nome = prompt("Digite seu nome")
+    const tipo = prompt("INternacional ou DOméstico")
+    const etapa = prompt("Semi-final SF, Decisão Terceito DT ou Final FI")
+    const categoria = Number(prompt("Categoria 1, 2, 3 ou 4?"))
+    const quantidade = Number(prompt("Quantidade de inressos?"))
+
+    let precoUnitario
+    switch (etapa) {
+        case "SF":
+            switch(categoria) {
+                case 1:
+                    precoUnitario = 1320
+                    break
+                case 2:
+                    precoUnitario = 880
+                    break
+                case 3:
+                    precoUnitario = 550
+                    break
+                case 4:
+                    precoUnitario = 220
+                    break
+                default:
+                    break
+            }
+            break
+        case "DT":
+            switch(categoria) {
+                case 1:
+                    precoUnitario = 660
+                    break
+                case 2:
+                    precoUnitario = 440
+                    break
+                case 3:
+                    precoUnitario = 330
+                    break
+                case 4:
+                    precoUnitario = 170
+                    break
+                default:
+                    break
+            }
+            break
+        case "FI":
+            switch(categoria) {
+                case 1:
+                    precoUnitario = 1980
+                    break
+                case 2:
+                    precoUnitario = 1320
+                    break
+                case 3:
+                    precoUnitario = 880
+                    break
+                case 4:
+                    precoUnitario = 330
+                    break
+                default:
+                    break
+            }
+            break
+            default:
+            break
+    }
+
+        if(tipo === "IN") {
+            precoUnitario = precoUnitario * 4.1
+        }
+
+
+    console.log("---Dados da compra---")
+    console.log("Nome do cliente:", nome)
+    console.log("Tipo do jogo:", tipo)
+    console.log("Etapa do jogo:", etapa)
+    console.log("Categoria", categoria)
+    console.log("---Valores---")
+    console.log("Valor do Ingresso:", precoUnitario)
+    console.log("Valor Total da Compra", precoUnitario*quantidade)
