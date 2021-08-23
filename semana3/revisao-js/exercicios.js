@@ -15,17 +15,32 @@ function retornaArrayInvertido(array) {
 
 // EXERCÍCIO 03
 function retornaArrayOrdenado(array) {
-  
+    array.sort(function(a,b){
+        return a - b
+    })
+    return array
 }
 
 // EXERCÍCIO 04
 function retornaNumerosPares(array) {
-  
+    let par = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            par.push(array[i])
+        }
+    }
+    return par
 }
 
 // EXERCÍCIO 05
 function retornaNumerosParesElevadosADois(array) {
- 
+    let parElevadoDois = []
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 === 0) {
+            parElevadoDois.push(array[i] * array[i])
+        }
+    }
+    return parElevadoDois
 }
 
 // EXERCÍCIO 06
