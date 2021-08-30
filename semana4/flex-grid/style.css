@@ -1,0 +1,57 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.page-confeitaria-container{
+    display:grid ;
+    height: 100vh;
+    grid-template-rows: 70px 1fr 70px;
+    grid-template-columns: 300px 1fr 300px;
+    row-gap: 8px;
+    column-gap: 8px;
+    
+}
+
+.coluna{
+    grid-template-columns: 50px 1fr 50px;
+   
+   
+}
+
+header{
+    background-color: mediumvioletred;
+    grid-template-columns: 300px 1fr 300px;
+    grid-column: 1/ -1;
+    height: 70px;
+    display: flex;
+    align-items:center ;
+    padding: 8px;
+}
+
+img{
+    width: 20px;
+}
+
+nav{
+    background-color: #f2d0e0;
+    
+}
+
+section{
+    background-color: darkgray;
+    
+    
+}
+
+footer{
+    background-color: mediumvioletred ;
+    display: grid;
+    height: 5vh;
+    grid-template-rows: 70px 1fr 70px;
+    grid-template-columns: 300px 1fr 300px;
+    grid-column: 1/ -1 ;
+    display: flex;
+    justify-content: center;
+}
