@@ -1,0 +1,74 @@
+h1{
+    color: black;
+    padding: 25px 5px 5px 320px;
+    margin: 250px;
+    display: inline;
+    font-size: 36px;
+    text-align: center;
+}
+
+* { 
+    background-color: skyblue;
+    margin: 0;
+}
+
+.menu{
+    margin: 10px 0;
+    
+}
+
+.menu a{
+    color: indigo;
+    border: 1px solid indigo;
+    padding: 7px;
+    margin: 5px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.curriculo{
+    font-size: 18px;
+}
+
+.rodape-footer{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    font-size: 24px;
+    text-align: center;
+}
+
+.foto-perfil{
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    padding: 30px 10px 0px 620px;
+}
+
+#foto-projeto{
+    width: 1300px;
+    height: 580px;
+    text-align: center;
+    padding: 0px 30px 30px 120px;
+
+}
+
+h2{
+    color: black;
+    text-align: center;
+    margin: 10px;
+    font-size: 30px;
+    padding: 10px 10px;
+}
+
+.texto-perfil{
+    font-size: 24px;
+    padding: 0px 0px 0px 350px;
+}
+
+.email{
+    font-size: 22px;
+    text-align: center;
+}
