@@ -64,12 +64,6 @@ class Post extends React.Component {
     }
   }
 
-    this.setState({
-      curtindo: false,
-      numeroCurtidas: this.state.numeroCurtidas + 1
-    })    
-
-  }
 
   onClickComentario = () => {
     this.setState({
