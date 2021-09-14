@@ -1,32 +1,35 @@
 import React from "react";
 import styled from  "styled-components"
+import PerguntaAberta from "./PerguntaAberta";
+import PerguntaOpcoes from "./PerguntaOpcoes";
 
 const Home = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
   `
 
-export default class Etapa1 extends React.Component {
+class Etapa1 extends React.Component {
     render() {
         return (
             <Home>
-                <h2>ETAPA 1 - DADOS GERAIS</h2>
+                <h3>ETAPA 1 - DADOS GERAIS</h3>
 
-                <h3>1. Qual o seu nome?</h3>
-                <input></input>
+                <PerguntaAberta pergunta={"1. Qual o seu nome?"} />
+                <PerguntaAberta pergunta={"2. Qual a sua idade?"} />
+                <PerguntaAberta pergunta={"3. Qual o seu email?"} />
+                <PerguntaOpcoes 
+                    pergunta={"4. Qual a sua escolaridade?"} 
+                    opcoes={[
+                        "Ensino médio incompleto",
+                        "Ensino médio completo",
+                        "Ensino superior incompleto",
+                        "Ensino superior completo"
+                    ]}
+                    />
+                    </Home>
+        );
+                }}
 
-                <h3>2. Qual sua idade?</h3>
-                <input></input>
-
-                <h3>3. Qual o seu email?</h3>
-                <input></input>
-
-                <h3>4. Qual a sua escolaridade?</h3>
-                <input></input>
-
-            </Home>
-        )
-    }
-}
+            export default Etapa1;

@@ -1,25 +1,21 @@
 import React from "react";
 import styled from  "styled-components"
+import PerguntaAberta from "./PerguntaAberta";
+import PerguntaOpcoes from "./PerguntaOpcoes";
 
 
-const Home = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  `
-
-export default class Etapa2 extends React.Component {
+class Etapa2 extends React.Component {
     render() {
         return (
-            <Home>
-                <h2>ETAPA 2 - INFORMAÇÕES DO ENSINO SUPERIOR</h2>
+            <div>
+                <h3>ETAPA 2 - INFORMAÇÕES DO ENSINO SUPERIOR</h3>
 
-                <h3>5. Qual curso?</h3>
-                <input></input>
+                <PerguntaAberta pergunta={"5. Qual curso?"} />
+                <PerguntaAberta pergunta={"6. Qual a unidade de ensino?"} />             
+            </div>
+        );
+    }
+}
 
-                <h3>6. Qual a unidade de ensino?</h3>
-                <input></input>
-            </Home>
-        )}}
+    export default Etapa2;
         

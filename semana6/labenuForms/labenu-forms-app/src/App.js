@@ -6,34 +6,10 @@ import Etapa3 from './components/Etapa3';
 import Final from './components/Final';
 import './App.css';
 
-const Home = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  `
-
-export default class App extends React.Component {
-  state = {
-    etapa: 1
-  }
-
-  mostraEtapa1 = () => {
-    this.setState({ etapa: 1});
+  export default class App extends React.Component {
+    state = {
+      etapa: 1
   };
-
-  mostraEtapa2 = () => {
-    this.setState({ etapa: 2});
-  };
-
-  mostraEtapa3 = () => {
-    this.setState({ etapa: 3});
-  };
-
-  mostraFinal = () => {
-    this.setState({ etapa: "Final"});
-  };
-
 
   renderizaEtapa = () => {
     switch (this.state.etapa) {
@@ -43,19 +19,26 @@ export default class App extends React.Component {
           return <Etapa2 />;
           case 3:
             return <Etapa3 />;
-            case "Final":
+            case 4:
               return <Final />;
               default:
+                return <Final />;
     }
-  }
+  };
+
+  proximaEtapa = () => {
+    this.setState({ etapa: this.state.etapa + 1});
+  };
 
   render() {
     return (
-      <Home>
-          <h1> <u> LABENU FORMS </u> </h1>
+      <div className="App">
           {this.renderizaEtapa()}
-          <button>Próxima Etapa</button>
-      </Home>
-  )
+          <br />
+          {this.state.etapa !== 4 && (
+            <button onClick={this.proximaEtapa}>Próxima Etapa</button>
+          )}
+      </div>
+  );
 }
 }

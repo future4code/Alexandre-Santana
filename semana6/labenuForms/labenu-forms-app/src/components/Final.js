@@ -1,21 +1,14 @@
 import React from "react";
 import styled from  "styled-components"
 
-const Home = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: column;
-  `
 
-export default class Final extends React.Component {
-    render() {
+export default function PerguntaAberta(props) {
+    
         return (
-            <Home>
-                <h2>O FORMULÁRIO ACABOU</h2>
+            <div>
+                <h3>O FORMULÁRIO ACABOU</h3>
 
-                <h3>Muito obrigado por participar!Entraremos em contato!</h3>
-            </Home>
+                <p>Muito obrigado por participar!Entraremos em contato!</p>
+            </div>
         )
     }
-}
