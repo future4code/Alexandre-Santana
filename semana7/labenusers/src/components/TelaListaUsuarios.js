@@ -10,16 +10,24 @@ const CardUsuario = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-radius: 5px;
 `
 
 const CardContainer = styled.div` 
     display: flex;
     flex-direction:column;
-    border: 2px solid blue;
+    border: 5px solid blue;
     padding: 5px 50px;
-    margin: 30px 550px;
+    margin: 30px 600px;
     width: 200px;  
     align-items: center;
+    border-radius: 5px;
+`
+const Button = styled.button` 
+    padding: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
 `
 
 export default class TelaListaUsuarios extends React.Component {
@@ -81,8 +89,8 @@ export default class TelaListaUsuarios extends React.Component {
 
                 {listaUsuarios}
 
-                <button onClick={this.props.irParaCadastro}>Ir para Cadastro</button>
-                
+                <Button onClick={this.props.irParaCadastro}>Ir para Cadastro</Button>
+
                 </CardContainer>
 
                 </div>

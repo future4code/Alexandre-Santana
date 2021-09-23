@@ -5,11 +5,23 @@ import styled from 'styled-components';
 const CardCadastro = styled.div` 
     display: flex;
     flex-direction:column;
-    border: 2px solid blue;
+    border: 5px solid blue;
     padding: 10px;
-    margin: 30px 550px;
-    width: 200px;  
+    margin: 30px 600px;
+    width: 300px;  
+    height: 250px;
     align-items: center;
+    border-radius: 5px;
+`
+const Button = styled.button` 
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+`
+const Input = styled.input` 
+    padding: 5px;
+    margin-top: 5px;
+    border-radius: 5px;
 `
 
 export default class TelaCadastro extends React.Component {
@@ -53,20 +65,20 @@ export default class TelaCadastro extends React.Component {
             <div>
                 <CardCadastro>
 
-                <button onClick={this.props.irParaLista}>Ir para Lista de Usuário</button>
+                <Button onClick={this.props.irParaLista}>Ir para Lista de Usuário</Button>
                 <h2>Cadastro</h2>
                 
-                <input 
+                <Input 
                     placeholder={"Nome"}
                     value={this.state.nome}
                     onChange={this.handleNome}
                 />
-                <input 
+                <Input
                     placeholder={"E-mail"}
                     value={this.state.email}
                     onChange={this.handleEmail}
                     />
-                <button onClick={this.fazerCadastro}>Cadastrar</button>
+                <Button onClick={this.fazerCadastro}>Cadastrar</Button>
 
                 </CardCadastro>
             </div>
