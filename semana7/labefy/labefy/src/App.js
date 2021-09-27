@@ -1,72 +1,42 @@
 import React from "react";
 import axios from "axios";
+import styled from "styled-components";
+import Header from "./components/Header";
+import PlaylistCreationPage from "./components/PlaylistCreationPage";
+import PlaylistManagerPage from "./components/PlaylistManagerPage";
 
-const headers = {
-  headers: {
-    Authorization: "alexandre-santana-maryam"
-  }
-}
+const AppContainer = styled.div` 
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+`
 
 export default class App extends React.Component {
   state = {
-    playLists: [],
-    playListName: ""
+    currentPage: "playlistCreationPage"
   }
 
-componentDidMount() {
-  this.getAllPlaylists()
-}
-
-handlePlayListName = (e) => {
-  this.setState({ playListName: e.target.value })
-}
-
-createPlaylist = () => {
-  const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
-
-  const body = {
-    name: this.state.playListName
+  changePage = (currentPage) => {
+    this.setState({currentPage: currentPage})
   }
 
-  axios
-  .post(url, body, headers)
-  .then((res) => {
-    this.setState({ playListName: "" })
-    this.getAllPlaylists()
-  })
-  .catch((err) => {
-    alert(err)
-  })
-}
-    getAllPlaylists = () => {
-      const url = "https://us-central1-labenu-apis.cloudfunctions.net/labefy/playlists"
-      axios
-      .get(url, headers)
-      .then((res) => {
-        console.log(res)
-        
-      })
-      .catch((err) => {
-        console.log(err)
-      })
-    }
+  render() {
+    const renderCurrentPage = () => {
+      if (this.state.currentPage === "playlistCreationPage") {
+        return <PlaylistCreationPage />
+      } else if (this.state.currentPage === "playlistmanagerPage") {
+          return <PlaylistManagerPage />
+        }
+      }
   
-  render () {
-    const playListComponents = this.state.playLists.map((play) => {
-      return <li></li>
-    })
-
     return (
-      <div>
-        <h1>Labefy</h1>
-        <input
-        placeholder="Nome playlist"
-        value={this.state.playListName} 
-        onChange={this.handlePlayListName}
+      <AppContainer>
+
+        <Header 
+          changePage={this.changePage}
         />
-        <button onClick={this.createPlayLists}>Enviar</button>
-        {playListComponents}
-      </div>
+      {renderCurrentPage()}
+      </AppContainer>
     );
-  }
-}
+}}
