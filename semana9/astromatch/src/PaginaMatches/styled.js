@@ -6,13 +6,14 @@ export const MatchesContainer = styled.div`
     justify-content: center;
 `
 
-export const MatchesList = styled.div`
+export const ListaMatches = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 500px;
-    border: 3px solid chartreuse;
+    width: 550px;
+    border: 1px solid violet;
+    border-radius: 5px;
     padding: 20px;
-    margin: 20px;
+    margin: 40px;
 `

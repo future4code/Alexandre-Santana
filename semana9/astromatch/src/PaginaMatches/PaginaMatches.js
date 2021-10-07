@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import { MatchesContainer, MatchesList } from './styled'
+import { MatchesContainer, ListaMatches } from './styled'
 import axios from 'axios'
 import { ListaPerfil } from "../ListaPerfil/ListaPerfil"
 
@@ -28,9 +28,9 @@ export const PaginaMatches = () => {
 
     return (
         <MatchesContainer>
-            <MatchesList>
+            <ListaMatches>
                 {list.length > 0 ? list : <h3>Você não recebeu matches 💔</h3>}
-            </MatchesList>
+            </ListaMatches>
         </MatchesContainer>
     )
 }

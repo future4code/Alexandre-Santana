@@ -11,12 +11,12 @@ export const Profile = styled.div`
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 600px;
-    border: 3px solid blue;
+    width: 550px;
+    border: 1px solid violet;
     border-radius: 5px;
     padding: 20px;
-    margin: 20px;
-    background-color: aquamarine
+    margin: 40px;
+    background-color: violet;
 `
 
 export const Button = styled.div`
@@ -24,9 +24,9 @@ export const Button = styled.div`
     align-items: center;
     justify-content: center;
     gap: 20px;
-    width: 1500px;
+    width: 1520px;
 `
 
 export const ProfileImage = styled.img`
-    width: 250px;
+    width: 350px;
 `
