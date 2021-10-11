@@ -24,7 +24,7 @@ const ButtonContainer = styled.div`
 export const PaginaPrincipal = () => {
     const [profile, setProfile] = useState({})
 
-    const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno'
+    const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/alexandre-santana-maryam'
 
     useEffect(() => {
         getProfile()

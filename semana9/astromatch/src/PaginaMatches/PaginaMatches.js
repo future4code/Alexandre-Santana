@@ -10,7 +10,7 @@ export const PaginaMatches = () => {
         getMatchesList()
     }, [])
 
-    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/matches"
+    const url = "https://us-central1-missao-newton.cloudfunctions.net/astroMatch/alexandre-santana-maryam/matches"
 
     const getMatchesList = () => {
         axios.get(url)
@@ -29,7 +29,7 @@ export const PaginaMatches = () => {
     return (
         <MatchesContainer>
             <ListaMatches>
-                {list.length > 0 ? list : <h3>Você não recebeu matches 💔</h3>}
+                {list.length > 0 ? list : <h3>Você não recebeu matches!</h3>}
             </ListaMatches>
         </MatchesContainer>
     )

@@ -39,7 +39,7 @@ const App = () => {
     }
   }
 
-  const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/:aluno/clear'
+  const url = 'https://us-central1-missao-newton.cloudfunctions.net/astroMatch/alexandre-santana-maryam/clear'
 
   const limpaMatches = () => {
     axios.put(url)
