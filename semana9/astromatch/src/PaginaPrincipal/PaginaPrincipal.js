@@ -40,10 +40,10 @@ export const PaginaPrincipal = () => {
         })
     }
 
-    const choosePerson = (choise) => {
+    const choosePerson = (choice) => {
         const body = {
             id: profile.id,
-            choise: choise
+            choice: choice
         }
         axios.post(`${url}/choose-person`, body)
         .then((res) => {
@@ -65,8 +65,8 @@ export const PaginaPrincipal = () => {
             <p>{profile.bio}</p>
         <div>
             <ButtonContainer>
-            <button onClick={() => choosePerson(true)}>❌</button>
-            <button onClick={() => choosePerson(false)}>💚</button>
+            <button onClick={() => choosePerson(false)}>❌</button>
+            <button onClick={() => choosePerson(true)}>💚</button>
             </ButtonContainer>
         </div>
         </Profile>
